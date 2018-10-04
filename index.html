@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The James Website</title>  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> <!--Enable JQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> <!--JQuery UI-->
+    <script type="text/javascript" src="script.js"></script> <!-- This script creates the tabs -->
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css" /> <!--Needed for tabs-->
+    <!--<script src="https://mcapi.us/scripts/minecraft.js"></script>  <-- enables the Minecraft script
+    <script type="text/javascript" src="mcServerStatus.js"></script> <-- script file to monitor Minecraft server -->
+</head>
+
+<style>
+    #title_animation {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+</style>
+
+<body>
+    <div id="title_animation">
+        <embed src="title.swf" width="794" height="100" type="application/x-shockwave-flash" quality="high">
+        <p><font size="1.5">(Yes, I know, Flash is bad. But I dug up this circa 2004 title animation I once did and it made me chuckle. So, while the site is being heavily renovated, in the meantime....allow me to amuse myself.)</font></p>
+    </div>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Welcome!</a></li>
+            <li><a href="#tabs-2">Blog</a></li>
+            <li><a href="#tabs-3">Forums</a></li>
+            <li><a href="#tabs-4">WoW Guild</a></li>
+            <!--<li><a href="#tabs-5">Minecraft</a></li>-->
+        </ul>
+        <div id="tabs-1">
+            <p>I haven't been advertising this site to anyone, so how did you even find this site? Did you just get curious after seeing the domain my personal email uses?</p>
+            <p>In any case, there isn't much to see here yet, as everything is still under construction. This main page and other pages are in testing/development stages as I learn how to develop this site. It's my own personal labor of love.</p>
+            <p>There are a couple of obscure corners of the site that are operational and ready for your perusal. Click each tab for more info.</p>
+        </div>
+        <div id="tabs-2">
+            <p>My <a href="http://jameswebsite.net/thejamesblog/">blog</a> is a space for random rambling and musing, set aside from major public arenas such as Facebook.  It's running on Wordpress and will continue to be updated, hopefully with more regularity as I get my feet wet with it. Feel free to jump into the conversation there anytime.<p>
+        </div>
+        <div id="tabs-3">
+            <p>Here reside my <a href="http://jameswebsite.net/forums">forums</a>, which are operational, but purely in testing mode right now.  It's your run-of-the-mill phpBB board that I'll breath more life into once I'm confident it's stable and worth anyone's attention.  Feel free to play around in there.</p>
+        </div>
+        <div id="tabs-4">
+            <p>Join us in World of Warcraft!  I run my own progression raiding guild and we're always looking for new friends.</p>
+            <p><a href=https://www.wowprogress.com/guild/us/fizzcrank/Heroes+of+Cybertron /><img alt='WoW Guild Rankings' src='https://wowprogress.com/guild_img/735504/out/type.forum/guild_rank.realm/ach_rank.realm' border='0' /></a></p>
+        </div>
+        <!--The following is disabled until Minecraft Server is back in service
+        <div id="tabs-5">
+            <p>Come check out my private Minecraft server! It's a freinds-only server where you can be free to do as you wish with minimal limitations.  I'm always looking to expand the community!</p>
+            <p>hyperion.bissinc.us:25565</p>
+            <p>(135.84.96.24:25565)</p>
+            <div class="statusbox"</div>
+            <span class="label"></span>
+            <div class="server-status">
+                Current server status: <span class="server-online"></span>.
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>
