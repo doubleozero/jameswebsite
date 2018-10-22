@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css" /> <!--Needed for tabs-->
     <!--<script src="https://mcapi.us/scripts/minecraft.js"></script>  <-- enables the Minecraft script
     <script type="text/javascript" src="mcServerStatus.js"></script> <-- script file to monitor Minecraft server -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+    <!-- The above enables bootstrap, which is needed to use the "container" and card" classes in the "about" section -->
 </head>
 
 <style>
@@ -59,6 +61,14 @@
                 Current server status: <span class="server-online"></span>.
             </div>
         </div> -->
+    </div>
+    <br>
+    <div id="profile" class="container-fluid"> <!-- ensures this section spans full width of viewport -->
+    	<div class="card mx-auto w-75 card-body bg-dark"> <! -- creates/orientates the card background -->
+    		<div class="text-center">
+    			<h1 id="about" class="text-primary">About James</h1>
+    		</div>
+    	</div>
     </div>
 </body>
 </html>
