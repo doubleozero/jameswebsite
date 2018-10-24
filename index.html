@@ -20,12 +20,24 @@
         margin-right: auto;
         width: 50%;
     }
+
+    body {
+        background-color: black;
+    }
+
+    .logo_container  {
+    	display: grid;
+    	grid-template-columns: 100px 100px 100px;
+    }
+
+    .logo {
+    	width: 100px;
+    }
 </style>
 
 <body>
     <div id="title_animation">
         <embed src="title.swf" width="794" height="100" type="application/x-shockwave-flash" quality="high">
-        <p><font size="1.5">(Yes, I know, Flash is bad. But I dug up this circa 2004 title animation I once did and it made me chuckle. So, while the site is being heavily renovated, in the meantime....allow me to amuse myself.)</font></p>
     </div>
     <div id="tabs">
         <ul>
@@ -64,9 +76,21 @@
     </div>
     <br>
     <div id="profile" class="container-fluid"> <!-- ensures this section spans full width of viewport -->
-    	<div class="card mx-auto w-75 card-body bg-dark"> <! -- creates/orientates the card background -->
+    	<div class="card mx-auto w-75 card-body bg-dark"> <!-- creates/orients/colors card background -->
     		<div class="text-center">
     			<h1 id="about" class="text-primary">About James</h1>
+    		</div>
+    	</div>
+    </div>
+    <br>
+    <div id="logos" class="container-fluid"> <!-- full width of viewport -->
+    	<div class="card mx-auto w-75 card-body bg-dark"> <!-- card settings -->
+    		<div class="logo_container"> <!-- contains all logos - going to see if this can be reused -->
+    			<div><img src=blazemeter.png class="logo"></div>
+    			<div><img src=ca.png class="logo"></div>
+    			<div><img src=oracle.gif class="logo"></div>
+    			<div><img src=twist2.jpg class="logo"></div>
+    			<div><img src=skywire.jpeg class="logo"></div>
     		</div>
     	</div>
     </div>
