@@ -28,10 +28,28 @@
     .logo_container  {
     	display: grid;
     	grid-template-columns: 100px 100px 100px;
+    	/* grid-template-columns: auto auto auto; -- If I want to fit columns around the images */
+    	grid-gap: 10px; /* Can be "10px 10px" for row/column gap */
     }
 
     .logo {
     	width: 100px;
+    }
+
+    .col1 {
+    	grid-column: 1/2;
+    }
+    .col2 {
+    	grid-column: 2/3;
+    }
+    .col3 {
+    	grid-column: 3/4;
+    }
+    .col4 {
+    	grid-column: 1/2;
+    }
+    .col5 {
+    	grid-column: 3/4;
     }
 </style>
 
@@ -86,11 +104,11 @@
     <div id="logos" class="container-fluid"> <!-- full width of viewport -->
     	<div class="card mx-auto w-75 card-body bg-dark"> <!-- card settings -->
     		<div class="logo_container"> <!-- contains all logos - going to see if this can be reused -->
-    			<div><img src=blazemeter.png class="logo"></div>
-    			<div><img src=ca.png class="logo"></div>
-    			<div><img src=oracle.gif class="logo"></div>
-    			<div><img src=twist2.jpg class="logo"></div>
-    			<div><img src=skywire.jpeg class="logo"></div>
+    			<div class="col1"><img src=blazemeter.png class="logo"></div>
+    			<div class="col2"><img src=ca.png class="logo"></div>
+    			<div class="col3"><img src=oracle.gif class="logo"></div>
+    			<div class="col4"><img src=twist2.jpg class="logo"></div>
+    			<div class="col5"><img src=skywire.jpeg class="logo"></div>
     		</div>
     	</div>
     </div>
