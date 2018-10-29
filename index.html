@@ -25,11 +25,15 @@
         background-color: black;
     }
 
-    .logo_container  {
+    .logo_container  {  /* CSS Grid */
     	display: grid;
     	grid-template-columns: 100px 100px 100px;
     	/* grid-template-columns: auto auto auto; -- If I want to fit columns around the images */
     	grid-gap: 10px; /* Can be "10px 10px" for row/column gap */
+    	justify-content: center;
+    	justify-items: center;
+    	align-items: center;
+    	/* Consider later applying responsive settings to reorder the rows/columns to viewport size*/
     }
 
     .logo {
