@@ -9,21 +9,67 @@
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css" /> <!--Needed for tabs-->
     <!--<script src="https://mcapi.us/scripts/minecraft.js"></script>  <-- enables the Minecraft script
     <script type="text/javascript" src="mcServerStatus.js"></script> <-- script file to monitor Minecraft server -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+    <!-- The above enables bootstrap, which is needed to use the "container" and card" classes in the "about" section -->
 </head>
 
 <style>
-    #title_animation {
-        display: block;
+    .center_vid {
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        display: block;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    img.resize {
+        width: 10%;
+        height: auto;
+        padding-right: 10px;
+    }
+
+    .logo_container  {  /* CSS Grid */
+    	display: grid;
+    	grid-template-columns: 100px 100px 100px;
+    	/* grid-template-columns: auto auto auto; -- If I want to fit columns around the images */
+    	grid-gap: 10px; /* Can be "10px 10px" for row/column gap */
+    	justify-content: center;
+    	justify-items: center;
+    	align-items: center;
+    	/* Consider later applying responsive settings to reorder the rows/columns to viewport size*/
+    }
+
+    .logo {
+    	width: 100px;
+    }
+
+    .col1 {
+    	grid-column: 1/2;
+    }
+    .col2 {
+    	grid-column: 2/3;
+    }
+    .col3 {
+    	grid-column: 3/4;
+    }
+    .col4 {
+    	grid-column: 1/2;
+    }
+    .col5 {
+    	grid-column: 3/4;
     }
 </style>
 
 <body>
-    <div id="title_animation">
-        <embed src="title.swf" width="794" height="100" type="application/x-shockwave-flash" quality="high">
-        <p><font size="1.5">(Yes, I know, Flash is bad. But I dug up this circa 2004 title animation I once did and it made me chuckle. So, while the site is being heavily renovated, in the meantime....allow me to amuse myself.)</font></p>
+    <!-- Video elements are inline rather than block, so I did not apply a class using display: block; -->
+    <div id = title-animation>
+        <video class="center_vid" width="794" height-"100" controls loop autoplay muted>
+            <source src="./mov/title.mp4" type="video/mp4">
+            <source src="./mov/title.webm" type="video/webm">
+            Sorry, your browser doesn't support HTML5 video.
+        </video>
     </div>
     <div id="tabs">
         <ul>
@@ -59,6 +105,34 @@
                 Current server status: <span class="server-online"></span>.
             </div>
         </div> -->
+    </div>
+    <br>
+    <div id="profile" class="container-fluid"> <!-- ensures this section spans full width of viewport -->
+    	<div class="card mx-auto w-75 card-body bg-dark"> <!-- creates/orients/colors card background -->
+    		<div class="text-left">
+    			<h1 id="about" class="text-primary text-center">About James</h1>
+                <div class="text-white">
+                    <img id="profile_pic" class="resize" src="./img/profile_pic.jpeg" align="left">
+                    <p>I am a 15-year veteran of the tech industry with a personal passion for writing and technology. My career to this point has largely been centered on production support for a wide variety of large-scale enterprise software applications, each of which has been an adventure unto itself!  Over the years I have provided senior-level technical support for a number of major tech companies including Oracle, CA Technologies, and Broadcom, where I currently reside.  Presently, I provide support for Blazemeter, the cutting-edge leader in shif-left continuous testing via the cloud.</p>
+                    <br>
+                    <p>Today I am aspiring toward software development with the goal of fulfilling a dream I've had since childhood of going into software development.  I am currently working on various personal and work projects in Java and Python, and this site itself is one such project, which I'm using to further my skills in HTML5, CSS, and JavaScript.</p>
+                    <br>
+                    <p>Want to see the projects I'm currently working on?  Then please check out my GitHub repositories at <a href="https://github.com/doubleozero">https://github.com/doubleozero</a>.</p>
+                </div>
+    		</div>
+    	</div>
+    </div>
+    <br>
+    <div id="logos" class="container-fluid"> <!-- full width of viewport -->
+    	<div class="card mx-auto w-75 card-body bg-dark"> <!-- card settings -->
+    		<div class="logo_container"> <!-- contains all logos - going to see if this can be reused -->
+    			<div class="col1"><img src="./blazemeter.png" class="logo"></div>
+    			<div class="col2"><img src="./ca.png" class="logo"></div>
+    			<div class="col3"><img src="./oracle.gif" class="logo"></div>
+    			<div class="col4"><img src="./twist2.jpg" class="logo"></div>
+    			<div class="col5"><img src="./skywire.jpeg" class="logo"></div>
+    		</div>
+    	</div>
     </div>
 </body>
 </html>
